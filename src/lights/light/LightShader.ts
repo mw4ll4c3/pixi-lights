@@ -1,4 +1,4 @@
-import { Texture, utils, Matrix } from '@pixi/core';
+import { Texture, utils, Matrix } from 'pixi.js';
 import { IMeshMaterialOptions, MeshMaterial } from '@pixi/mesh';
 import { vert } from '../shared';
 

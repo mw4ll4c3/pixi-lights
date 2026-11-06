@@ -1,4 +1,4 @@
-import { Rectangle, Quad } from '@pixi/core';
+import { Rectangle, Quad } from 'pixi.js';
 
 /**
  * @extends PIXI.Quad

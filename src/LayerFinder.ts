@@ -1,4 +1,4 @@
-import { Texture } from '@pixi/core';
+import { Texture } from 'pixi.js';
 import { Group, Layer } from '@pixi/layers';
 
 /**

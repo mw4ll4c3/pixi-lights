@@ -1,4 +1,4 @@
-import { Geometry, Renderer, BLEND_MODES, DRAW_MODES } from '@pixi/core';
+import { Geometry, Renderer, BLEND_MODES, DRAW_MODES } from 'pixi.js';
 import { Layer } from '@pixi/layers';
 import { Mesh } from '@pixi/mesh';
 import { LayerFinder, lightGroup } from '../../LayerFinder';

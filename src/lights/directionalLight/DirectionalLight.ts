@@ -1,5 +1,5 @@
 import { Light } from '../light/Light';
-import { Point, Renderer } from '@pixi/core';
+import { Point, Renderer } from 'pixi.js';
 import { DisplayObject } from '@pixi/display';
 import { DirectionalLightShader } from './DirectionalLightShader';
 

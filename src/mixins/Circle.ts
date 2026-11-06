@@ -1,4 +1,4 @@
-import { Circle } from '@pixi/core';
+import { Circle } from 'pixi.js';
 
 /**
  * PixiJS namespace.

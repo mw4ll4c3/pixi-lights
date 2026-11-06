@@ -1,4 +1,4 @@
-import { Program, Point } from '@pixi/core';
+import { Program, Point } from 'pixi.js';
 import { LightShader } from '../light/LightShader';
 import { directionalFrag } from './directional.frag';
 
