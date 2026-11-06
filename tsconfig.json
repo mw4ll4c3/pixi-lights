@@ -16,7 +16,6 @@
         "resolveJsonModule": true,
         "skipDefaultLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "types": ["node"],
         "paths": {
             "~/*": ["./src/*"],
         },
