@@ -1,26 +1,13 @@
 {
   "name": "@pixi/lights",
-  "version": "4.1.0",
-  "description": "A plugin that adds deferred lighting to PixiJS v6",
-  "author": "Ivan Popelyshev",
+  "version": "8.x-1.0.0",
+  "description": "A plugin that adds deferred rendering to PixiJS v8",
+  "author": "Ivan Popelyshev, Mark Wallace",
   "contributors": [
     "Ivan Popelyshev <ivan.popelyshev@gmail.com>",
-    "Matt Karl <matt@mattkarl.com>"
+    "Matt Karl <matt@mattkarl.com>",
+    "Mark Wallace <roadwallace@gmail.com>"
   ],
-  "extensionConfig": {
-    "namespace": "PIXI.lights",
-    "lint": [
-      "src"
-    ],
-    "globals": {
-      "@pixi/layers": "PIXI.layers"
-    },
-    "docsName": "PixiJS Lights",
-    "docsCopyright": "Copyright &copy; 2015 - 2022 Ivan Popelyshev",
-    "docsTitle": "PixiJS Lights API Documentation",
-    "docsDescription": "Documentation for PixiJS Lights library",
-    "docsKeyword": "docs, documentation, pixi, pixijs, rendering, pixi-lights, display, pixi-display, javascript"
-  },
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
@@ -31,48 +18,31 @@
       "types": "./lib/index.d.ts"
     }
   },
-  "homepage": "http://www.pixijs.com/",
-  "bugs": "https://github.com/pixijs/lights/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixijs/lights.git"
+    "url": "https://github.com/pixijs-userland/lights"
   },
   "scripts": {
-    "clean": "xs clean",
-    "start": "xs serve",
-    "watch": "xs watch",
-    "build": "xs build",
-    "lint": "xs lint",
-    "lint:fix": "xs lint --fix",
-    "types": "xs types",
-    "release": "xs release",
-    "docs": "xs docs",
-    "deploy": "xs deploy",
-    "test": "xs build,docs"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=16",
-    "npm": ">=8"
+    "clean": "rm -rf lib dist .pr_uploads .s3_uploads",
+    "build": "npm run clean && rollup -c .configs/rollup.config.mjs",
+    "watch": "rollup -c .configs/rollup.config.mjs -w"
   },
   "files": [
     "dist/",
     "lib/"
   ],
   "peerDependencies": {
-    "@pixi/core": "^7.0.0",
-    "@pixi/display": "^7.0.0",
-    "@pixi/layers": "^2.0.1",
-    "@pixi/mesh": "^7.0.0"
+    "pixi.js": "^8.22.0"
   },
   "devDependencies": {
-    "@pixi/core": "^7.0.0",
-    "@pixi/display": "^7.0.0",
-    "@pixi/extension-scripts": "^1.8.1",
-    "@pixi/layers": "^2.0.1",
-    "@pixi/mesh": "^7.0.0"
+    "pixi.js": "^8.22.0",
+    "@rollup/plugin-alias": "^6.0.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.55.1",
+    "tslib": "^2.6.2",
+    "typescript": "^6.0.3"
   }
 }
